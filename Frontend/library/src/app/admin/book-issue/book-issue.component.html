@@ -1,0 +1,42 @@
+<!-- <div class="issue-book-container">
+  <h2>Issue Book</h2>
+  <form [formGroup]="issueBookForm" (ngSubmit)="issueBook()">
+      <!-- Student selection -->
+      <div class="form-group">
+          <label for="student">Student</label>
+          <select formControlName="student" class="form-control" required>
+              <option *ngFor="let student of students" [value]="student.id">{{ student.name }}</option>
+          </select>
+      </div>
+
+      <!-- Book selection -->
+      <div class="form-group">
+          <label for="book">Book</label>
+          <select formControlName="book" class="form-control" required>
+              <option *ngFor="let book of books" [value]="book.id">{{ book.name }}</option>
+          </select>
+      </div>
+
+      <!-- Issue date -->
+      <div class="form-group">
+          <label for="issue_date">Issue Date</label>
+          <input formControlName="issue_date" type="date" class="form-control" required />
+      </div>
+
+      <!-- Submission date -->
+      <div class="form-group">
+          <label for="submission_date">Submission Date</label>
+          <input formControlName="submission_date" type="date" class="form-control" required />
+      </div>
+
+      <!-- Fine per day -->
+      <div class="form-group">
+          <label for="fine_per_day">Fine Per Day</label>
+          <input formControlName="fine_per_day" type="number" class="form-control" required />
+      </div>
+
+      <button type="submit" [disabled]="!issueBookForm.valid" class="btn btn-primary">
+          Issue Book
+      </button>
+  </form>
+</div> -->

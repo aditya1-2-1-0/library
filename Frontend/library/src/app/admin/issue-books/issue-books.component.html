@@ -1,0 +1,25 @@
+<div class="issue-book-container">
+  <form [formGroup]="issueBookForm" (ngSubmit)="issueBook()">
+      <h2>Issue Book</h2>
+
+      <!-- Loop through the fields to dynamically create input groups -->
+      <div class="input-group" *ngFor="let field of ['student', 'book', 'issue_date', 'submission_date', 'fine_per_day']">
+          <label [for]="field">{{ field | titlecase }}</label>
+          <input 
+              [id]="field" 
+              [formControlName]="field" 
+              placeholder="Enter {{ field | titlecase }}" 
+              type="text" 
+              class="form-control"
+          />
+          <div *ngIf="issueBookForm.get(field)?.invalid && issueBookForm.get(field)?.touched" class="error-message">
+              {{ field | titlecase }} is required.
+          </div>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" [disabled]="issueBookForm.invalid" class="submit-btn">
+          Issue Book
+      </button>
+  </form>
+</div>

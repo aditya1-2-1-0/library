@@ -1,0 +1,72 @@
+
+.issued-books-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #f5f6f7;
+  }
+  
+  h2 {
+    font-size: 28px;
+    color: #2e3a59;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+  }
+  
+  .issued-books-table {
+    width: 100%;
+    max-width: 1200px;
+    border-collapse: collapse; /* Ensures borders collapse into a single line */
+    margin-top: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: white;
+  }
+  
+  .issued-books-table th {
+    background-color: #1e3a8a;
+    color: white;
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 600;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  
+  .issued-books-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+  }
+  
+  .issued-books-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .issued-books-table tr:last-child td {
+    border-bottom: none;
+  }
+  
+  @media (max-width: 768px) {
+    .issued-books-container {
+      padding: 20px;
+    }
+  
+    .issued-books-table th,
+    .issued-books-table td {
+      padding: 8px 10px;
+      font-size: 14px;
+    }
+  
+    .issued-books-table {
+      width: 100%;
+    }
+  
+    h2 {
+      font-size: 24px;
+    }
+  }
+  

@@ -1,0 +1,114 @@
+
+.issue-book-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f6f7;
+    padding: 40px 20px;
+  }
+  
+  form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 700px; 
+    font-family: 'Roboto', Arial, sans-serif;
+  }
+  
+  h2 {
+    font-size: 28px;
+    color: #2e3a59;
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: 600;
+  }
+  
+  .input-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Label styling */
+  .input-group label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+  
+  /* Input field styling */
+  .form-control {
+    padding: 15px; /* Increased padding for better visual appeal */
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 100%; /* Ensures the field takes up full available width */
+    box-sizing: border-box; /* Prevents padding from causing overflow */
+    transition: border 0.3s ease;
+  }
+  
+  .form-control:focus {
+    border-color: #1e3a8a;
+    outline: none;
+  }
+  
+  /* Error message styling */
+  .error-message {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  /* Submit button styling */
+  .submit-btn {
+    background-color: #1e3a8a;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 15px 20px; /* Increased padding */
+    border-radius: 6px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .submit-btn:hover:not(:disabled) {
+    background-color: #2c4579;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .issue-book-container {
+      padding: 20px;
+    }
+  
+    form {
+      width: 100%;
+      max-width: 100%;
+    }
+  
+    h2 {
+      font-size: 24px;
+    }
+  
+    .form-control {
+      font-size: 14px;
+      padding: 12px;
+    }
+  
+    .submit-btn {
+      font-size: 16px;
+      padding: 12px 18px; 
+    }
+  }
+  

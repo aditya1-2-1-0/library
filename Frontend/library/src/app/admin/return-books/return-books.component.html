@@ -1,0 +1,18 @@
+<div class="return-book-container">
+  <form (ngSubmit)="returnBook()">
+    <h2>Return Book</h2>
+    
+    <!-- Input field for Book ID -->
+    <div class="input-group">
+      <label for="bookId">Enter Book ID:</label>
+      <input id="bookId" [(ngModel)]="bookId" type="number" class="form-control" placeholder="Enter Book ID" required />
+      <!-- Optional error message if needed -->
+      <div *ngIf="bookId === null || bookId === undefined" class="error-message">
+        Book ID is required.
+      </div>
+    </div>
+    
+    <!-- Return Book button -->
+    <button type="submit" class="submit-btn" [disabled]="!bookId">Return Book</button>
+  </form>
+</div>

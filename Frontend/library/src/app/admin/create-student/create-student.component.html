@@ -1,0 +1,39 @@
+<div class="create-student-container">
+  <form [formGroup]="studentForm" (ngSubmit)="createStudent()">
+    <h2>Create Student</h2>
+
+    <!-- Other fields (name, class_name, roll_no, phone_number) -->
+    <div class="input-group" *ngFor="let field of ['name', 'class_name', 'roll_no', 'phone_number']">
+      <label [for]="field">{{ field | titlecase }}</label>
+      <input 
+        [id]="field" 
+        [formControlName]="field" 
+        placeholder="Enter {{ field | titlecase }}" 
+        type="text" 
+        class="form-input"
+      />
+      <div *ngIf="studentForm.get(field)?.invalid && studentForm.get(field)?.touched" class="error-message">
+        {{ field | titlecase }} is required.
+      </div>
+    </div>
+
+    <!-- User fields (email and password) -->
+    <div formGroupName="user">
+      <div class="input-group" *ngFor="let field of ['email', 'password']">
+        <label [for]="'user.' + field">{{ 'User ' + field | titlecase }}</label>
+        <input 
+          [id]="'user.' + field" 
+          [formControlName]="field" 
+          placeholder="Enter {{ 'User ' + field | titlecase }}" 
+          type="text" 
+          class="form-input"
+        />
+        <div *ngIf="studentForm.get('user.' + field)?.invalid && studentForm.get('user.' + field)?.touched" class="error-message">
+          User {{ field | titlecase }} is required.
+        </div>
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="studentForm.invalid" class="submit-btn">Create Student</button>
+  </form>
+</div>

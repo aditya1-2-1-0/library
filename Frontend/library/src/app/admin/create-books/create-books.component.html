@@ -1,0 +1,21 @@
+<div class="create-book-container">
+  <form [formGroup]="bookForm" (ngSubmit)="createBook()">
+      <h2>Create Book</h2>
+
+      <div class="input-group" *ngFor="let field of ['name', 'author', 'subject', 'description', 'price']">
+          <label [for]="field">{{ field | titlecase }}</label>
+          <input 
+              [id]="field" 
+              [formControlName]="field" 
+              placeholder="Enter {{ field | titlecase }}" 
+              type="text" 
+              class="form-input"
+          />
+          <div *ngIf="bookForm.get(field)?.invalid && bookForm.get(field)?.touched" class="error-message">
+              {{ field | titlecase }} is required.
+          </div>
+      </div>
+
+      <button type="submit" [disabled]="bookForm.invalid" class="submit-btn">Create Book</button>
+  </form>
+</div>

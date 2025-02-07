@@ -1,0 +1,48 @@
+<!-- <div class="issued-books-container">
+  <h2>Issued Books</h2>
+  
+  <table class="issued-books-table">
+    <thead>
+      <tr>
+        <th>Student</th>
+        <th>Book</th>
+        <th>Issue Date</th>
+        <th>Submission Date</th>
+        <th>Fine Per Day</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let issuedBook of issuedBooks">
+        <td>{{ issuedBook.student.name }}</td>
+        <td>{{ issuedBook.book.name }}</td>
+        <td>{{ issuedBook.issue_date }}</td>
+        <td>{{ issuedBook.submission_date }}</td>
+        <td>{{ issuedBook.fine_per_day }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div> -->
+<div class="issued-books-container">
+  <h2>Issued Books</h2>
+  
+  <table class="issued-books-table">
+    <thead>
+      <tr>
+        <th>Student</th>
+        <th>Book</th>
+        <th>Issue Date</th>
+        <th>Submission Date</th>
+        <th>Fine Per Day</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let issuedBook of issuedBooks">
+        <td>{{ issuedBook.student_name }}</td>  <!-- Use the student_name field -->
+        <td>{{ issuedBook.book_name }} by {{ issuedBook.book_author }}</td> <!-- Use book_name and book_author -->
+        <td>{{ issuedBook.issue_date | date }}</td>  <!-- Format date properly -->
+        <td>{{ issuedBook.submission_date | date }}</td>  <!-- Format date properly -->
+        <td>{{ issuedBook.fine_per_day | currency }}</td> <!-- Display fine per day -->
+      </tr>
+    </tbody>
+  </table>
+</div>

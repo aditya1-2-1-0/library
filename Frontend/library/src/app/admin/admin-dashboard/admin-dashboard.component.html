@@ -1,0 +1,22 @@
+<div class="admin-dashboard-container">
+  <div class="admin-sidebar">
+    <h2>Admin Dashboard</h2>
+
+    <div class="admin-nav">
+      <ul>
+        <li><a routerLink="create-student">Create Student</a></li>
+        <li><a routerLink="create-book">Create Book</a></li>
+        <li><a routerLink="view-issued-books">View Issued Books</a></li>
+        <li><a routerLink="issue-book">Issue Book</a></li>
+        <li><a routerLink="return-book">Return Book</a></li>
+      </ul>
+    </div>
+
+    <!-- Logout Button -->
+    <button class="logout-button" (click)="logout()">Logout</button>
+  </div>
+
+  <div class="dashboard-content">
+    <router-outlet></router-outlet>
+  </div>
+</div>
